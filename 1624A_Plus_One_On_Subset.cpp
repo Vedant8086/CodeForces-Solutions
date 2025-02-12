@@ -14,14 +14,20 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int n;
+        cin >> n;
+        vector<int> a(n,0);
+        for(int i = 0;i < n;i++) {
+            cin >> a[i];
+        }
+        int a1 = *max_element(a.begin(),a.end());
+        int a2 = *min_element(a.begin(),a.end());
+        cout << a1 - a2 << endl;
+    }
     return 0;
 }

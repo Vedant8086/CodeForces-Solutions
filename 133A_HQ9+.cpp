@@ -14,14 +14,18 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    string s;
+    cin >> s;
+    map<char,int> m;
+    for(auto x:s) {
+        m[x]++;
+    }
+    if(m['H'] > 0 || m['Q'] > 0 || m['9'] > 0) {
+        cout << "YES" <<  endl;
+    } else {
+        cout << "NO" << endl;
+    }
     return 0;
 }

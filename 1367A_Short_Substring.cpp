@@ -14,14 +14,22 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        string s;
+        cin >> s;
+        string ans = "";
+        ans += s[0];
+        ans += s[1];
+        for(int i = 3;i < s.length();i++) {
+            if(i % 2 != 0) {
+                ans += s[i];
+            }
+        }
+        cout << ans << endl;
+    }
     return 0;
 }

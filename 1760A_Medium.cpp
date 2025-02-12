@@ -14,14 +14,16 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int a,b,c;
+        cin >> a >> b >> c;
+        vector<int> vv{a,b,c};
+        sort(vv.begin(),vv.end());
+        cout << vv[1] << endl;
+    }
     return 0;
 }

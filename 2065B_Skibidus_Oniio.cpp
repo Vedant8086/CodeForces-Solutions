@@ -14,14 +14,23 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
+int canhe(string x) {
+    int n = x.size();
     for(int i = 0;i < n;i++) {
-        cin >> v[i];
+        if(x[i] == x[i+1]) {
+            return 1;
+        }
     }
 
+    return n;
+} 
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        string s;
+        cin >> s;
+        cout << canhe(s) << endl;
+    }
     return 0;
 }

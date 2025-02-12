@@ -14,14 +14,22 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    int t;
+    cin>> t;
+    while(t--) {
+        string s;
+        cin>>s;
+        map<char,int> m;
+        for(int i = 0;i <s.length();i++) {
+            m[s[i]]=i+1;
+        }
+        if(m['a'] == 1 || m['b'] == 2 || m['c'] == 3) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
     return 0;
 }

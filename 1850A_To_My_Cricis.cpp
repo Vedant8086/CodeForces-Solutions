@@ -14,14 +14,19 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int a,b,c;
+        cin >> a >> b >> c;
+        int x = a + b + c;
+        if(x - a >= 10 || x - b >= 10 || x - c >= 10) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
     return 0;
 }

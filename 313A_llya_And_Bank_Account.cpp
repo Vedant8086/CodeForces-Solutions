@@ -14,14 +14,22 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
+
 int main() {
     int n;
     cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
+    if(n > 0) {
+        cout << n << endl;
 
+    } else {
+        int x =abs(n);
+        int x1 = x % 10;
+        int x2 = (x / 10) % 10;
+        if(x1 > x2) {
+            cout << -1 * (x / 10) << endl;
+        } else {
+            cout << -1 * (x / 100 * 10 + x1) << endl;
+        }
+    }
     return 0;
 }

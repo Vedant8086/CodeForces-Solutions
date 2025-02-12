@@ -14,14 +14,20 @@
 #include<stdexcept>
 #include<fstream>
 using namespace std;
-//need to complete.
-int main() {
-    int n;
-    cin >> n;
-    vector<int> v(n,0);
-    for(int i = 0;i < n;i++) {
-        cin >> v[i];
-    }
 
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int a,b,c;
+        cin >> a >> b >> c;
+        if(a < b && b < c) {
+            cout << "STAIR" << endl;
+        } else if(a < b && b > c) {
+            cout << "PEAK" << endl;
+        } else {
+            cout << "NONE" << endl;
+        }
+    }
     return 0;
 }
